@@ -61,13 +61,13 @@ TOUCH        = touch
 # - Platform identifier ------------------------------------------------
 # ----------------------------------------------------------------------
 #
-ARCH         = Linux_Intel64
+ARCH         = Aurora_mpi
 #
 # ----------------------------------------------------------------------
 # - HPL Directory Structure / HPL library ------------------------------
 # ----------------------------------------------------------------------
 #
-TOPdir       = $(HOME)/hpl
+TOPdir       = $(HOME)/aurora/stanford-setup/hpl-2.2
 INCdir       = $(TOPdir)/include
 BINdir       = $(TOPdir)/bin/$(ARCH)
 LIBdir       = $(TOPdir)/lib/$(ARCH)
@@ -98,8 +98,7 @@ LAinc        = $(LAdir)/mkl/include
 endif
 ifndef  LAlib
 LAlib        = -Wl,--start-group \
-               -Wl,--end-group -lpthread -ldl /opt/nec/ve/nlc/1.0.0/lib/libblas_openmp.a \
-		/opt/nec/ve/ncc/1.2.0/lib/libvastfp.a
+               -Wl,--end-group -lpthread -ldl -lblas_sequential
 endif
 #
 # ----------------------------------------------------------------------
@@ -163,8 +162,6 @@ HPL_LIBS     = $(HPLlib) $(LAlib) $(MPlib)
 #    *) not display detailed timing information.
 #
 HPL_OPTS     = -DHPL_DETAILED_TIMING -DHPL_PROGRESS_REPORT
-# HPL_OPTS     = -DHPL_DETAILED_TIMING -DHPL_PROGRESS_REPORT -DHPL_CALL_CBLAS
-# HPL_OPTS     = -DHPL_DETAILED_TIMING -DHPL_PROGRESS_REPORT -DHPL_CALL_VSIPL
 #
 # ----------------------------------------------------------------------
 #
@@ -179,13 +176,13 @@ CC       = mpincc
 CCNOOPT  = $(HPL_DEFS)
 OMP_DEFS = -openmp
 # CCFLAGS  = $(HPL_DEFS) -O3 -w -z noexecstack -mt_mpi -z relro -z now -Wall
-CCFLAGS  = $(HPL_DEFS) -O3 -w -z noexecstack -z relro -z now -Wall
+CCFLAGS  = $(HPL_DEFS) -O3 -w -z noexecstack -z relro -z now -Wall -I /opt/nec/ve/nlc/1.0.0/include/
 #
 # On some platforms,  it is necessary  to use the Fortran linker to find
 # the Fortran internals used in the BLAS library.
 #
 LINKER       = $(CC)
-LINKFLAGS    = $(CCFLAGS) $(OMP_DEFS)
+LINKFLAGS    = $(CCFLAGS) $(OMP_DEFS) -L/opt/nec/ve/nlc/1.0.0/lib/
 #
 ARCHIVER     = ar
 ARFLAGS      = r
