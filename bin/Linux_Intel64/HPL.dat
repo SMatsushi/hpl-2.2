@@ -9,7 +9,7 @@ HPL.out      output file name (if any)
 0            PMAP process mapping (0=Row-,1=Column-major)
 1            # of process grids (P x Q)
 4            Ps
-4            Qs
+8            Qs
 16.0         threshold
 1            # of panel fact
 2            PFACTs (0=left, 1=Crout, 2=Right)
@@ -30,5 +30,4 @@ HPL.out      output file name (if any)
 1            Equilibration (0=no,1=yes)
 8            memory alignment in double (> 0)
 #### from http://www.advancedclustering.com/act_kb/tune-hpl-dat-file/
-## Nodes 4, Cores per Nodes 4, Memory PerNode 32000 MB Block Size(NB) 192
-
+## Nodes 4, Cores per Nodes 8, Memory PerNode 32000 MB Block Size(NB) 192
