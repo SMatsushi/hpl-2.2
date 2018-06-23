@@ -3,12 +3,12 @@ Innovative Computing Laboratory, University of Tennessee
 HPL.out      output file name (if any)
 6            device out (6=stdout,7=stderr,file)
 1            # of problems sizes (N)
-115584       Ns
+28800        Ns
 1            # of NBs
 192          NBs
 0            PMAP process mapping (0=Row-,1=Column-major)
 1            # of process grids (P x Q)
-4            Ps
+2            Ps
 4            Qs
 16.0         threshold
 1            # of panel fact
@@ -30,5 +30,5 @@ HPL.out      output file name (if any)
 1            Equilibration (0=no,1=yes)
 8            memory alignment in double (> 0)
 #### from http://www.advancedclustering.com/act_kb/tune-hpl-dat-file/
-## Nodes 4, Cores per Nodes 4, Memory PerNode 32000 MB Block Size(NB) 192
+## Nodes 1, Cores per Nodes 4, Memory PerNode 8000 MB Block Size(NB) 192
 
