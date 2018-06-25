@@ -177,12 +177,14 @@ CCNOOPT  = $(HPL_DEFS)
 OMP_DEFS = -openmp
 # CCFLAGS  = $(HPL_DEFS) -O3 -w -z noexecstack -mt_mpi -z relro -z now -Wall
 CCFLAGS  = $(HPL_DEFS) -O3 -w -z noexecstack -z relro -z now -Wall -I /opt/nec/ve/nlc/1.0.0/include/
+## CCFLAGS  = $(HPL_DEFS) -O3 -proginf -w -z noexecstack -z relro -z now -Wall -I /opt/nec/ve/nlc/1.0.0/include/
 #
 # On some platforms,  it is necessary  to use the Fortran linker to find
 # the Fortran internals used in the BLAS library.
 #
 LINKER       = $(CC)
 LINKFLAGS    = $(CCFLAGS) $(OMP_DEFS) -L/opt/nec/ve/nlc/1.0.0/lib/
+## LINKFLAGS    = $(CCFLAGS) $(OMP_DEFS) -proginf -L/opt/nec/ve/nlc/1.0.0/lib/
 #
 ARCHIVER     = ar
 ARFLAGS      = r
