@@ -17,5 +17,8 @@ cmd="mpirun -ve 1 -np 8 ./mpisep.sh ./xhpl"
 # to get Proginf output
 export VE_PROGINF=YES
 
+date
 echo $cmd
 $cmd
+date
+echo done.
