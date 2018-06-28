@@ -67,7 +67,7 @@ ARCH         = Aurora_mpi
 # - HPL Directory Structure / HPL library ------------------------------
 # ----------------------------------------------------------------------
 #
-TOPdir       = $(HOME)/aurora/stanford-setup/hpl-2.2
+TOPdir       = $(HOME)/aurora/hpl-2.2
 INCdir       = $(TOPdir)/include
 BINdir       = $(TOPdir)/bin/$(ARCH)
 LIBdir       = $(TOPdir)/lib/$(ARCH)
