@@ -3,9 +3,8 @@
 source /opt/nec/ve/mpi/1.1.0/bin/necmpivars.sh
 
 # Run on a single VE and eight MPI procs
-# ave 600GFlops peak 2.5TFlops
+#     without separating profile outputs
 ## cmd="mpirun -ve 1 -np 8 ./xhpl"
-
 
 # Run on a single VE0 and single MPI procs
 # using mpisep to separate proginf traces
