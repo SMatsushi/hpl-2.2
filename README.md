@@ -18,10 +18,11 @@ The Library path is set by:
 ```
 /opt/nec/ve/mpi/1.1.0/bin/necmpivars.sh
 ```
-
-* SX Aurora Tsubasa is designed to extract good performance in sparce matrix calicuration or random data access to large data set supported by its hardware (fewer numbers of core, large vector registers, and sophisticated memory pipelie, etc) and vector compilers.
-
- Along with program optimization or applying heuristics, applications lose parallelizm. Their data access pattern becomes random. It is getting harder to achieving high hit rate on instruction/data cache. 
+* SX Aurora Tsubasa is designed to extract good performance in sparce matrix calicuration
+or random data access to large data set supported
+by its hardware (fewer numbers of core, large vector registers, and sophisticated memory pipelie, etc)
+and vector compilers.  
+Along with program optimization or applying heuristics, applications lose parallelizm. Their data access pattern becomes random. It is getting harder to achieving high hit rate on instruction/data cache. 
 
 ------
 # Usage
