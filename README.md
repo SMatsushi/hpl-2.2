@@ -6,16 +6,16 @@ Modified for NEC SX Aurora Tsubasa. Created Make.Aurora_mpi from './makes/Make.L
 
 Note) 
 * The benchmark result is not final or formal as:  
-Code is just out-of-box. The source is un-modified. No special complieoption option is added.
+    * Code is just out-of-box. The source is un-modified. No special complieoption option is added.
 
 * Genral consideration about Linpack for SX Aurora Tsubasa:
- * Linpack is designed to measure peak performance not susptained performance in real applicationss.
- * SX Aurora Tsubasa is designed to extract good performance in sparce matrix calicuration
+    * Linpack is designed to measure peak performance not susptained performance in real applicationss.
+    * SX Aurora Tsubasa is designed to extract good performance in sparce matrix calicuration
 or random data access to large data set supported
 by its hardware (fewer numbers of core, large vector registers, and sophisticated memory pipelie, etc)
 and vector compilers.  
 Along with program optimization or applying heuristics, applications lose parallelizm. Their data access pattern becomes random. It is getting harder to achieving high hit rate on instruction/data cache. 
- * In Linpack, computation is done in blas (Basic Linear Algebra Subroutines) library:
+    * In Linpack, computation is done in blas (Basic Linear Algebra Subroutines) library:
  <https://en.wikipedia.org/wiki/LINPACK>   
 We may say we are just evaluating the library not vector complier.  
 We are using:
