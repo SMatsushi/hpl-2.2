@@ -73,7 +73,7 @@ NOTE) Source code compiled with FTRACE Flags may run very slow.
 * Convert the ftrace.out.\* with 'ftrace' command. Result is printed to stdout:
 
 ```
-$ /opt/nec/ve/bin/ftrace –f ftrace.out.\*
+$ /opt/nec/ve/bin/ftrace –f ftrace.out.*
 ```
 
 ## Other Commands
