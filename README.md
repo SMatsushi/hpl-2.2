@@ -18,6 +18,7 @@ The Library path is set by:
 ```
 /opt/nec/ve/mpi/1.1.0/bin/necmpivars.sh
 ```
+* Linpack is designed to measure peak performance not susptained performance in real applicationss.
 * SX Aurora Tsubasa is designed to extract good performance in sparce matrix calicuration
 or random data access to large data set supported
 by its hardware (fewer numbers of core, large vector registers, and sophisticated memory pipelie, etc)
