@@ -31,9 +31,9 @@ Compile and execution is done on NEC Aurora SX server with NEC MPI installed.
 * 'mpincc' : Compiler
 * 'mpirun' : Run the compiled executable.
 
-NEC MPI running envirionment setup is written in following shell script. Please run it first.  
+NEC MPI running envirionment is set in the following shell script. Please run it before running mpi tools.  
 ```
-$ source /opt/nec/ve/mpi/\[version\]/bin/necmpivars.sh
+$ source /opt/nec/ve/mpi/[version]/bin/necmpivars.sh
 ```
 
 The line is included in shell scripts for compile/run refered below.
