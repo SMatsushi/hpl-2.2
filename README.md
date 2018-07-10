@@ -1,5 +1,6 @@
 # hpl-2.2
-Portable High Performance Linpack (HPL) 2.2  from <http://www.netlib.org/benchmark/hpl/> .
+Portable High Performance Linpack (HPL) 2.2  from <http://www.netlib.org/benchmark/hpl/> .  
+___'HPL' here does not seem to stand for 'Highly Pallalel Linpack' used in TOP500, etc.___ 
 
 # Description
 Modified for NEC SX Aurora Tsubasa. Created Make.Aurora_mpi from './makes/Make.Linux_Intel64_ncc'
